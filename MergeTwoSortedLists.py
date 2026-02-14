@@ -28,22 +28,8 @@ class Solution:
                 else:
                     e.next = temp
                     e = temp
-        while l1:
-            temp = l1
-            l1 = l1.next
-            temp.next = None
-            if(s == None):
-                s = e = temp
-            else:
-                e.next = temp
-                e = temp
-        while l2:
-            temp = l2
-            l2 = l2.next
-            temp.next = None
-            if(s == None):
-                s = e = temp
-            else:
-                e.next = temp
-                e = temp
+        if l1:
+            e.next = l1       
+        elif l2:
+            e.next = l2
         return s
